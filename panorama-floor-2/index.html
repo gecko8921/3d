@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Floor 2 - 360 view</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+<script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+<style>
+  html, body { margin:0; height:100%; background:#f4f1ec; }
+  #pano { width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div id="pano"></div>
+<script>
+  pannellum.viewer('pano', {
+    type: 'equirectangular',
+    panorama: 'floor-2-360.jpg',
+    autoLoad: true,
+    autoRotate: -2,
+    autoRotateInactivityDelay: 4000,
+    yaw: 0,
+    pitch: -5,
+    hfov: 100,
+    showZoomCtrl: false,
+    mouseZoom: false,
+    keyboardZoom: false,
+    compass: false
+  });
+</script>
+</body>
+</html>
