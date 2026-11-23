@@ -14,17 +14,22 @@
 <body>
 <div id="pano"></div>
 <script>
-  pannellum.viewer('pano', {
+  var viewer = pannellum.viewer('pano', {
     type: 'equirectangular',
     panorama: 'floor-2-360.jpg',
     autoLoad: true,
-    yaw: 135,
-    pitch: -8,
+    yaw: 85,
+    pitch: -3,
     hfov: 100,
     showZoomCtrl: false,
     mouseZoom: false,
     keyboardZoom: false,
     compass: false
+  });
+  viewer.on('load', function () {
+    setTimeout(function () {
+      viewer.lookAt(-5, 0, 100, 9000);
+    }, 2000);
   });
 </script>
 </body>
